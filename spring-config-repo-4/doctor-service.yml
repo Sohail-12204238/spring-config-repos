@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: doctor-service
+  datasource:
+    url: mysql:jdbc://localhost:3306/doctordb?createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver;
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
