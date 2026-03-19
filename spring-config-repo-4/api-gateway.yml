@@ -5,13 +5,13 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: doctor-service
-          uri: lb://DOCTOR-SERVICE
+        - id: DOCTOR-SERVICE
+          uri: lb://doctor-service
           predicates:
             - Path=/doctors/**
 
-        - id: appointment-service
-          uri: lb://APPOINTMENT-SERVICE
+        - id: APPOINTMENT-SERVICE
+          uri: lb://appointment-service
           predicates:
             - Path=/appointments/**
 
