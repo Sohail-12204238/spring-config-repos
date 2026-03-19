@@ -6,12 +6,12 @@ spring:
     gateway:
       routes:
         - id: DOCTOR-SERVICE
-          uri: lb://DOCTOR-SERVICE
+          uri: lb://doctor-service
           predicates:
             - Path=/doctors/**
 
         - id: APPOINTMENT-SERVICE
-          uri: lb://APPOINTMENT-SERVICE
+          uri: lb://appointment-service
           predicates:
             - Path=/appointments/**
 
