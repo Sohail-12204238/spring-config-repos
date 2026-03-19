@@ -10,8 +10,8 @@ spring:
           predicates:
             - Path=/doctors/**
 
-        - id: APPOINTMENT-SERVICE
-          uri: lb://appointment-service
+        - id: appointment-service
+          uri: lb://APPOINTMENT-SERVICE
           predicates:
             - Path=/appointments/**
 
