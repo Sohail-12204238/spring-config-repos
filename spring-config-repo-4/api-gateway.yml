@@ -8,12 +8,12 @@ spring:
         - id: DOCTOR-SERVICE
           uri: lb://doctor-service
           predicates:
-            - Path=/doctors/**
+            - Path=/doctors, /doctors/**
 
         - id: APPOINTMENT-SERVICE
           uri: lb://appointment-service
           predicates:
-            - Path=/appointments/**
+            - Path=/appointments, /appointments/**
 
 server:
   port: 8085
